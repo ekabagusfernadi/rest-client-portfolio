@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube & Instagram API (Menggunakan cURL)</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="container">
+        <center>
+          <h1>Youtube & Instagram API (Menggunakan cURL)</h1>
+        </center>
+      </div>
+    </header>
+    <section id="content" class="content">
+      <div class="container">
+        <!-- Youtube & Instagram API (Menggunakan cURL) -->
+        <!-- API yang lebih kompleks dari omdb sebelumnya -->
+
+        <!-- API Client -->
+        <!-- PHP -->
+        <!-- * file_get_contents("url") -->
+        <!-- * utf8_encode() -->
+        <!-- * json_decode() -->
+
+        <!-- * cURL -->
+        <!-- diphp bisa connect ke public api menggunakan cURL -->
+
+        <!-- Javascript -->
+        <!-- * jQuery = $.getJSON("url", function(result){}) -->
+        <!-- * jQuery = $.ajax({url:, type:, dataType:, data:, success:function(result){}}) -->
+        <!-- * vanilla js = JSON.parse() -->
+
+        <!-- Let's Code -->
+        <!-- masuk ke https://developers.google.com untuk api youtube -->
+        <!-- masuk ke https://instagram.com/developer untuk api instagram -->
+        <!-- untuk youtube : menampilkan jml sub dan video terakhir di website -->
+        <!-- untuk ig : menampilakn jumlh follower saat ini -->
+        <!-- data bisa berubah otomatis -->
+
+        <!-- youtube -->
+        <!-- dapatkan keynya = add youtube data/overview -->
+        <!-- masuk ke Google Developers Console untuk dapat key -->
+        <!-- https://console.cloud.google.com/projectselector2/apis/dashboard?authuser=1&pli=1&supportedpurview=project&project=&folder=&organizationId= -->
+        <!-- create project = isi nama project, selain itu biarkan default -->
+        <!-- jika sudah klik +ENABLE APIS AND SERVICES = cari youtube -->
+        <!-- pilih youtube data api(karena ini berisi sub, komentar, video, dll) -->
+        <!-- jika sudah klik CREATE CREDENTIALS untuk dapatkan key -->
+        <!-- pilih api yang mana, dan pilih data yang mau diakses(pilih public data untuk akses data2 public) -->
+        <!-- sudah muncul keynya = AIzaSyD4SrY7A9cCoXTODjtgeTLd_nIzpqkmf0U -->
+        <!-- api keynya bisa diubah nama -->
+
+        <!-- konek ke api youtube -->
+        <!-- https://developers.google.com/youtube -->
+        <!-- add youtube data/reference -->
+        <!-- data macam2 yang disebelah kiri = endpoints nya/ujung apinya (kategori) -->
+        <!-- banner/profile picture = channels/overview untuk lihat apa yg direturn saat kita request ke endpoint channels = kita cari json "thumbnails" -->
+        <!-- jml sub = channel json "subscriberCount" -->
+        <!-- cara request http bisa dilihat di channels/list -->
+        <!-- coba connect lewat postman dulu -->
+        <!-- https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCTp4xp69f7qGWq_EzqvI-2g&key=AIzaSyD4SrY7A9cCoXTODjtgeTLd_nIzpqkmf0U -->
+        <!-- parameter part bisa dipilih seperlunya -->
+        <!-- parameter id tulis valuenya bisa diisi id channel youtubenya -->
+        <!-- parameter key valuenya apikey -->
+
+        <!-- konek lewat php cURL(client URL) -->
+        <!-- sebenarnya bisa dilakukan lewat console/terminal tapi php punya api nya supaya kita bisa pakai di script php -->
+        <!-- untuk ambil video terakhir yang diupload harus ganti endpoint api youtube dulu bukan di endpoint channels -->
+        <!-- video terakhir ada di endpoint search -->
+        <!-- sebenarnya video nya bisa berdasarkan view terbanyak, rating, dll -->
+        <!-- untuk menambahkan tombol subscribe tidak ada di endpoint api, lansung dari youtube = developer.google.com/youtube -->
+        <!-- subscribe buttons/add button = bisa diatur konfigurasinya lgsugn -->
+        <!-- copy sourcecode nya -->
+
+        <!-- Instagram -->
+        <!-- untuk instagram public apinya lebih ketat dari pada youtube, lebih sedikit informasi yang bisa kita ambil -->
+        <!-- dan hanya bisa ambil info dari akun ig sendiri, tidak bisa seperti youtube yang bisa ambil info dari akun orang lain -->
+        <!-- masuk ke instagram.com/developer lalu login -->
+        <!-- api instagram sudah di disabled :( / jadi satu sama api facebook -->
+
+        <!-- pakai ajax js lebih cepat untuk mengambil file dari public api daripada pakai PHP file_get_contents() / cURL -->
+        <!-- tapi kalau pakai ajax kalau web di inspect api keynya kelihatan, supaya tidak kelihatan bisa pakai login, atau pakai Oauth sekalian tidak pakai api key -->
+        <!-- sedangkan di php api keynya tidak kelihatan karena php dikerjakan di server side/ tidak bisa di inspect element -->
+      </div>
+    </section>
+  </body>
+</html>

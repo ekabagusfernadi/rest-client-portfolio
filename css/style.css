@@ -1,0 +1,19 @@
+.jumbotron img {
+  width: 25%;
+}
+
+section {
+  min-height: 420px;
+}
+
+.ig-thumbnail {
+  width: 100px;
+  height: 100px;
+  float: left;
+  overflow: hidden;
+  /* gambar ngumpet jika terlalu besar dari wadahnya */
+}
+
+.ig-thumbnail img {
+  width: 100px;
+}
